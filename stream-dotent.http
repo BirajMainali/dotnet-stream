@@ -1,0 +1,6 @@
+@stream_dotent_HostAddress = http://localhost:5101
+
+GET {{stream_dotent_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

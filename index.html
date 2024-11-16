@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal API Streaming</title>
+</head>
+
+<body>
+    <h1>Streaming from Minimal API</h1>
+    <button id="startStream">Start Stream</button>
+    <div id="output" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;"></div>
+
+    <script>
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const startStreamButtonElem = document.querySelector('#startStream');
+            const outputDiv = document.querySelector('#output');
+
+            startStreamButtonElem.addEventListener('click', () => {
+                const eventSource = new EventSource('http://localhost:5101/stream');
+                outputDiv.innerHTML = '';
+
+                eventSource.onmessage = (event) => {
+                    const messageElem = document.createElement('p');
+                    messageElem.textContent = event.data;
+                    outputDiv.appendChild(messageElem);
+                };
+
+                eventSource.onerror = () => {
+                    const errorElem = document.createElement('p');
+                    errorElem.textContent = 'Stream closed.';
+                    outputDiv.appendChild(errorElem);
+                    eventSource.close();
+                };
+
+            });
+        })
+    </script>
+</body>
+
+</html>

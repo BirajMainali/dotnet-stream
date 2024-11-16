@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "stream-dotent", "stream-dotent.csproj", "{3C55CF18-976B-4D34-B5EB-493F532B4E19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C55CF18-976B-4D34-B5EB-493F532B4E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C55CF18-976B-4D34-B5EB-493F532B4E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C55CF18-976B-4D34-B5EB-493F532B4E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C55CF18-976B-4D34-B5EB-493F532B4E19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {920E5C15-2CB5-4106-80FF-1A34D07A2290}
+	EndGlobalSection
+EndGlobal
